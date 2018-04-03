@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body>
+    <header class="display-3 text-center mb-5"> Ce mini projet represente la population Mondiale </header>
+    <p class="text-center"> La population mondiale , est le nombre d'êtres humains vivant sur Terre à un instant donné. Elle est estimée à 7,55 milliards au 1er juillet 2017 selon l'Organisation des Nations unies alors qu'elle était estimée à 7 milliards au 31 octobre 20112, à 6,1 milliards en 2000, entre 1,55 et 1,76 milliard en 1900 et de 600 à 679 millions d'habitants vers 1700.
+            Cette augmentation de la population tend cependant à ralentir avec une baisse mondiale plus ou moins importante de l'indice de fécondité.
+            En 2016, on estime que la population humaine mondiale augmente de 246 000 habitants par jour, résultat égal à la différence entre les 403 000 naissances et les 157 000 décès estimés par jour sur Terre, ce qui représente une hausse de 90 millions de personnes par an.
+            Le taux annuel de la croissance démographique de la population mondiale est de 1,2 %. En 2014, environ 54 % de la population mondiale vit en milieu urbain4</p>
+    <div class="row">
+        <div class="col-7">
+                <canvas id="myChart" width=800></canvas>
+                <p class="m-3">Population mondiale par continent en 2017 (en millions d'habitants)
+                    </p>
+       </div>
+       <div class="col-5"> 
+        <img src="/Users/farouk/Desktop/population-mondiale.png" id="img" style="width:60%" alt="Population mondiale par continent en 2008">
+        <p class="p-4"> Population mondiale par continent en 2008 </p>
+    </div>
+</div>
+
+<div class="card text-center">
+        <div class="card-header">
+          Featured
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Special title treatment</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+        <div class="card-footer text-muted">
+          2 days ago
+        </div>
+      </div>
+
+       </body>
+        <script>
+        var ctx = document.getElementById("myChart").getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ["Monde", "Asie", "Afrique", "Europe", "Amérique latine", "Océanie"],
+                datasets: [{
+                    label: ' Population',
+                    data: [75500, 45040, 12560, 7420, 6455, 4691],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255,99,132,1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero:true
+                        }
+                    }]
+                }
+            }
+        });
+        </script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        
+</body>
+</html>
